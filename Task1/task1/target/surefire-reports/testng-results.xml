@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="com.example.task1.SimpleTest" duration-ms="28" started-at="2015-01-27T19:56:37Z" finished-at="2015-01-27T19:56:37Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="28" started-at="2015-01-27T19:56:37Z" finished-at="2015-01-27T19:56:37Z">
+      <class name="com.example.task1.SimpleTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.task1.SimpleTest@2d209079]" name="setUp" is-config="true" duration-ms="10" started-at="2015-01-27T21:56:37Z" finished-at="2015-01-27T21:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="smallTest()[pri:0, instance:com.example.task1.SimpleTest@2d209079]" name="smallTest" duration-ms="2" started-at="2015-01-27T21:56:37Z" finished-at="2015-01-27T21:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- smallTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.task1.SimpleTest@2d209079]" name="tearDown" is-config="true" duration-ms="1" started-at="2015-01-27T21:56:37Z" finished-at="2015-01-27T21:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.task1.SimpleTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.example.task1.SimpleTest -->
+</testng-results>
