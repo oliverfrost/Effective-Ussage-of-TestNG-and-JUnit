@@ -7,6 +7,11 @@ import java.util.Random;
 public class FileHelper {
     private String testDirName = "TestDirectory";
 
+    /** Creates new file inside test directory if the file with
+     *  the same name doesn`t exist yet.
+     *
+     * @param fileName any string value
+     */
     public void createFile(String fileName){
         File file = new File(testDirName + "/" + fileName);
 
@@ -14,7 +19,7 @@ public class FileHelper {
             if (file.createNewFile()){
                 System.out.println("[INFO] File is created.");
             }else{
-                System.out.println("[WARNING] File already exists!");
+                System.out.println("[WARNING] File already exists or another issue appeared.");
             }
         } catch (IOException e) {
             System.out.println("[ERROR] Was unable to create new file with name: "+ fileName);
@@ -36,6 +41,4 @@ public class FileHelper {
         randomNumber = random.nextInt((maxValue + 1) - minValue) + (minValue);
         return randomNumber;
     }
-
-
 }
