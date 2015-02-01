@@ -14,7 +14,8 @@ public class TestBase {
 
     @AfterSuite(alwaysRun = true)
     public void clearTestEnvironment() {
-        System.out.println("--------------------FIXTURE 2");
+       File folder = new File("TestDirectory");
+       deleteDirectoryAndAllFilesInIt(folder);
     }
 
 

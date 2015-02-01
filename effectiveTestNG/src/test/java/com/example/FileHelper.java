@@ -41,4 +41,13 @@ public class FileHelper {
         randomNumber = random.nextInt((maxValue + 1) - minValue) + (minValue);
         return randomNumber;
     }
+
+
+    public boolean isFilePresent(String fileName){
+
+
+        return true;
+    }
+
+
 }
