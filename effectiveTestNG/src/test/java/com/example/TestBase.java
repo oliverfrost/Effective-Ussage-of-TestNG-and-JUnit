@@ -5,17 +5,16 @@ import java.io.File;
 
 public class TestBase {
 
-    @BeforeClass
+    @BeforeSuite(alwaysRun = true)
     public void prepareTestEnvironment() {
         File folder = new File("TestDirectory");
         createTestDirectory(folder);
     }
 
 
-    @AfterClass
+    @AfterSuite(alwaysRun = true)
     public void clearTestEnvironment() {
-        File folder = new File("TestDirectory");
-        deleteDirectoryAndAllFilesInIt(folder);
+        System.out.println("--------------------FIXTURE 2");
     }
 
 
@@ -26,7 +25,7 @@ public class TestBase {
     private void createTestDirectory(File folder){
         if (!folder.exists()) {
             if (folder.mkdir()) {
-                System.out.println("[INFO] Directory is created.");
+                System.out.println("[INFO] Directory was created.");
             } else {
                 System.out.println("[ERROR] Failed to create directory!");
             }

@@ -13,8 +13,10 @@ project.properties
 .checkstyle
 
 #IntelliJ IDEA
-.idea
-*.iml
+effectiveTestNG/.idea
+effectiveTestNG/test-output/
+
+effectiveTestNG/*.iml
 library/facebook/*.iml
 *.ipr
 *.iws
