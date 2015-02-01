@@ -17,15 +17,17 @@ public class FileHelper {
 
         try {
             if (file.createNewFile()){
-                System.out.println("[INFO] File is created.");
+                System.out.println("[INFO] File is created: "+ file.getName());
             }else{
-                System.out.println("[WARNING] File already exists or another issue appeared.");
+                System.out.println("[WARNING] File with name " + file.getName() +
+                                    "already exists or another issue appeared.");
             }
         } catch (IOException e) {
             System.out.println("[ERROR] Was unable to create new file with name: "+ fileName);
             e.printStackTrace();
         }
     }
+
 
     /**
      *  Generates one number in the range you specified with parameters.
@@ -53,6 +55,7 @@ public class FileHelper {
         return file.exists();
     }
 
+
     public boolean isTheOnlyFileWithThisName() {
         int filesWithSameName = 0;
         File folder = new File(testDirName);
@@ -65,5 +68,14 @@ public class FileHelper {
         }
 
         return (filesWithSameName == 1);
+    }
+
+    public Object generateRandomFileName() {
+        return "new_file" + new Random().nextInt();
+    }
+
+    public Object generateRandomFileFormat() {
+        String[] formats = new String[]{".xml",".txt",".json", ".csv", ".jpeg", ".bmp", ".gif", ".mp3"};
+        return formats[getRandomNumber(0,7)];
     }
 }

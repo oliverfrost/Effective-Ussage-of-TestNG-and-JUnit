@@ -1,10 +1,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="File Creation Test Suite" verbose="1" >
     <test name="File Creation Test">
+        <parameter name="fileName" value="conf"></parameter>
+        <parameter name="fileFormat" value="xml"></parameter>
+
        <groups>
             <run>
-            	<include name="positive"></include>
-                <include name="negative"></include>
+            	<include name="negative"></include>
+                <include name="positive"></include>
+
             </run>
 
             <dependencies>
