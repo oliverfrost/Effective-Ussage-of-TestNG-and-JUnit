@@ -43,11 +43,27 @@ public class FileHelper {
     }
 
 
+    /** Checks if file with given name exists in Test folder
+     *
+     * @param fileName name of the file you want to find
+     * @return true if file exists or else if not
+     */
     public boolean isFilePresent(String fileName){
-
-
-        return true;
+        File file = new File(testDirName + "/" + fileName);
+        return file.exists();
     }
 
+    public boolean isTheOnlyFileWithThisName() {
+        int filesWithSameName = 0;
+        File folder = new File(testDirName);
+        File[] entries = folder.listFiles();
 
+        for (File currentFile : entries) {
+            if(currentFile.getName().equals("new_file1.txt")){
+                filesWithSameName++;
+            }
+        }
+
+        return (filesWithSameName == 1);
+    }
 }
